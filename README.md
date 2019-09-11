@@ -1,2 +1,2 @@
 # Jup
-This tool make install requirement tools and program easier 
+Jup-tool make your installtion requirement tools and program more easier 
