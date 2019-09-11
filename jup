@@ -1,0 +1,184 @@
+#!/bin/bash
+
+#test the network connection
+
+if ping -q -c 4 -W 1 google.com >/dev/null; then
+echo -e "\e[1m\e[94mHi \e[1m\e[39m$USER\e[92m \e[1m====>>> Your network is UP"
+
+echo -e "\e[34mDo you want Update,Upgrade your machine [ y-n ]:"
+read upg
+
+if [ $upg = y ]
+    then
+    sudo apt-get update
+    sudo apt-get upgrade
+    fi
+
+echo -e "\e[36mDo You want install StartUP-Package included \e[90m \e[1m(wine, openvpn, ftp, apache2, pyhton3, git, wget, etc..) [y-n]:"
+read Package
+
+if [ $Package = y ]
+then
+    sudo apt-get dist-upgrade
+    sudo apt-get install wine
+    sudo apt-get install git
+    sudo apt-get install gedit
+    sudo apt-get install docker
+    sudo snap install docker
+    sudo apt  install docker.io
+    sudo apt-get install wget
+    sudo apt-get install python-dev
+    sudo apt-get install python-pip
+    sudo apt-get install python3
+    sudo apt-get install python-m2crypto
+    pip install iptools
+    sudo apt-get install ftp
+    sudo apt-get install apache2
+    sudo service postgresql start
+    sudo service apache2 start
+    sudo apt-get install openvpn
+    sudo apt-get install flashplugin-nonfree
+    sudo update -flashplugin-nonfree --install
+    sudo apt-get install htop
+    sudo apt-get install tor
+    sudo apt-get install synaptic
+    sudo apt-get install tree
+    sudo apt-get install notepad++
+
+    #to make run juptool as Program -------
+    sudo cp Jup.sh /bin/jup
+    sudo chmod 777 /bin/jup
+fi
+
+echo -e "\e[34mDo You want install any program by Juptool"
+echo -e "\e[33mMachine Tools in Jup (Terminator) - Recon Tools - Payload Tools like (Fatrat, etc.. )"
+echo -e "\e[34m \e[1mDo you [ y-n ]:"
+read complate
+
+if [ $complate = y ]
+then
+
+echo -e "\e[39Do you want install \e[91m\e[1mTerminator \e[39m\e[0m[y-n]:"
+read term
+
+if [ $term = y ]
+then
+sudo apt-get install terminator
+fi
+
+echo -e "Now Time For  \e[36m\e[1mRecon Tool's Do You Want \e[39m\e[0m[y-n]:"
+read recon
+if [ $recon = y ]
+then
+    echo -e "Do You want install \e[96m\e[1mShellPhish \e[39m\e[0m[y-n]:"
+    read ShellPhish
+    if [ $ShellPhish = y ]
+    then
+    cd
+    cd /opt/
+    git clone https://github.com/thelinuxchoice/shellphish.git
+#-----End of recon------
+    fi
+
+fi
+
+#-----------------------PAYLOAD---------------------------------------------
+echo -e "\e[5mNow Time For PAYLAOD's \e[39m\e[0m"
+
+
+echo -e "\e[91m\e[1mWould you install a list of Payload Tools \e[39m\e[0m[y-n]:"
+read payload
+
+if [ $payload = y ]
+then
+    echo -e "install \e[92m\e[1mVeil \e[39m\e[0m[y-n]:"
+    read Veil
+
+    if [ $Veil = y ]
+    then
+    echo -e "\e[91m\e[5mYour backdoor is coming out \e[39m\e[0m"
+    echo   -e      "\e[37m\e[1mWith Veil\e[39m\e[0m"
+
+    #for open the path you will ave the program in.
+
+    cd
+    cd /opt/
+
+    #To download the Program from  github.
+
+    sudo git clone https://github.com/Veil-Framework/Veil.git
+
+
+    echo -e "Program in your path"
+
+    #For open the path you where installing.
+
+    cd Veil/config
+
+    #Now to install program.
+
+    ./setup.sh
+
+    echo -e "Program has installed"
+
+
+    echo -e "If you want to start the Program type ./veil on setup File to run the Tool"
+
+
+    echo -e              "======= Backdoor ready to create ========"
+
+    echo   -e            "------- Open you Roket to world -------"
+    #End of veil
+    fi
+
+    #-----------------------------------------------------------------------#
+
+    echo -e "To install Fatrat [y-n]:"
+    read Fatrat
+
+    if [ $Fatrat = y ]
+    then
+      echo        -e        "Your backdoor is coming out By"
+
+      echo         -e                "THE FAT RAT"
+
+      #for open the path you will have the program in.
+      cd
+      cd /opt/
+
+      #To download the Program from  github.
+
+      sudo git clone https://github.com/Screetsec/TheFatRat
+
+
+      echo -e "Program in your path"
+
+      #For open the path you where installing.
+
+      cd TheFatRat/
+
+      #Now to install program.
+
+      sudo chmod +x setup.sh
+
+      ./setup.sh --silent --force
+
+      echo -e "Program has installed"
+
+
+      echo -e "If you want to start the Program type '\e[92m./fatrat OR fatrat'\e[39m\e[0m on setup File to run the Tool"
+
+
+      echo         -e                   "======== Backdoor ready to create ========"
+#End of Fatrat
+fi
+#end of install payloads
+fi
+#-----------------------------------END OF PAYLOAD----------------------------
+
+#End of install tool
+fi
+
+else
+  echo -e "\e[94m\e[1mHi \e[1m\e[39m$USER\e[31m \e[1m====>>> Your network is down Check your connection \e[39m\e[0m "
+fi
