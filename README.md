@@ -20,7 +20,9 @@ Tested on ==>
 Install command line:
 
 git clone https://github.com/o-joba/Jup.git
+
 cd Jup
+
 bash jup 
 
 
