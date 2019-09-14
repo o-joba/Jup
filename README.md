@@ -14,3 +14,15 @@ Jobs ==>
 Tested on ==> 
 - Kali linux 
 - Ubuntu
+
+
+
+Install command line:
+
+user$ git clone https://github.com/o-joba/Jup.git
+user$ cd Jup
+user$ bash jup 
+
+
+
+
