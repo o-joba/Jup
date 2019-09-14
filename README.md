@@ -19,9 +19,12 @@ Tested on ==>
 
 Install command line:
 
-user$ git clone https://github.com/o-joba/Jup.git
-user$ cd Jup
-user$ bash jup 
+git clone https://github.com/o-joba/Jup.git
+cd Jup
+bash jup 
+
+
+Then if you want open the tool at any time Just type ( jup ) in command line.
 
 
 
