@@ -5,7 +5,7 @@
 if ping -q -c 4 -W 1 google.com >/dev/null; then
 echo -e "\e[1m\e[94mHi \e[1m\e[39m$USER\e[92m \e[1m====>>> Your network is UP"
 
-echo -e "\e[34mDo you want Update,Upgrade your machine [ y-n ]:"
+echo -e "\e[34mDo you want Update,Upgrade your machine \e[0m[ y-n ]:"
 read upg
 
 if [ $upg = y ]
@@ -14,7 +14,7 @@ if [ $upg = y ]
     sudo apt-get upgrade
     fi
 
-echo -e "\e[36mDo You want install StartUP-Package included \e[90m \e[1m(wine, openvpn, ftp, apache2, pyhton3, git, wget, etc..) [y-n]:"
+echo -e "\e[36mDo You want install StartUP-Package included \e[90m \e[1m(wine, openvpn, ftp, apache2, pyhton3, git, wget, etc..) \e[0m[y-n]:"
 read Package
 
 if [ $Package = y ]
@@ -52,7 +52,7 @@ fi
 
 echo -e "\e[34mDo You want install any program by Juptool"
 echo -e "\e[33mMachine Tools in Jup (Terminator) - Recon Tools - Payload Tools like (Fatrat, etc.. )"
-echo -e "\e[34m \e[1mDo you [ y-n ]:"
+echo -e "\e[34m \e[1mDo you \e[0m[ y-n ]:"
 read complate
 
 if [ $complate = y ]
@@ -133,7 +133,7 @@ then
 
     #-----------------------------------------------------------------------#
 
-    echo -e "To install Fatrat [y-n]:"
+    echo -e "To install Fatrat \e[0m[y-n]:"
     read Fatrat
 
     if [ $Fatrat = y ]
