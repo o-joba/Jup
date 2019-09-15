@@ -46,7 +46,7 @@ then
     sudo apt-get install notepad++
 
     #to make run juptool as Program -------
-    sudo cp Jup.sh /bin/jup
+    sudo cp jup /bin/jup
     sudo chmod 777 /bin/jup
 fi
 
