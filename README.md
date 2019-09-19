@@ -1,5 +1,5 @@
 # Jup
-Jup-tool make your installtion requirement tools and program after installing kali-linux more easier 
+Jup-tool it a simple way make your installtion requirement tools and program after installing kali-linux more easier 
 
 Jobs ==>
 - Test your connection 
