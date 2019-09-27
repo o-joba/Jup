@@ -44,6 +44,7 @@ then
     sudo apt-get install synaptic
     sudo apt-get install tree
     sudo apt-get install notepad++
+    sudo apt-get install metagoofil
 
     #to make run juptool as Program -------
     sudo cp jup /bin/jup
